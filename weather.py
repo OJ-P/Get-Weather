@@ -1,7 +1,6 @@
-import config
+import config  # you will need a config file with variable api_key to function
 import requests  # library to allow http requests
 import sys  # Library to terminate program
-
 
 
 def choose_city():
