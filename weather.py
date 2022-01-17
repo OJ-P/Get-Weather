@@ -1,5 +1,7 @@
+import config
 import requests  # library to allow http requests
 import sys  # Library to terminate program
+
 
 
 def choose_city():
@@ -9,9 +11,8 @@ def choose_city():
 
 
 def get_weather_details(city_value):
-    api_key = "51d095d6596e71e8c80946724a3a0712"  # openweather api key
     city = city_value  # city for weather
-    url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + api_key + "&units=metric"
+    url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + config.api_key + "&units=metric"
 
     request = requests.get(url)  # assign request result to variable
     json = request.json()  # result is a json file, assign to variable
